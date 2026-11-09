@@ -2,7 +2,6 @@
 <html lang="pt-BR" data-family="swiss" data-medium="slide" data-theme="brand">
 <head>
 <meta charset="UTF-8">
-<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VBRA · Metodologia de branding · FINACI</title>
 <!-- GZ:FONTS:START · 字体由 guizang-design 字体清单生成；需要把字体内置进 HTML 时用 gz-fonts.mjs embed（卡片 skill 的 render.mjs 会自动内置） -->
@@ -3455,7 +3454,7 @@ window.__pptPresenter=(()=>{
     const availableWidth=viewport.clientWidth,availableHeight=viewport.clientHeight;
     if(!availableWidth||!availableHeight)return;
     const width=Math.min(availableWidth,availableHeight*(16/9)),height=width*(9/16);
-    frame.style.width=`${width}px`;frame.style.height=`${height}px`;
+    const s=width/1920;frame.style.maxWidth='none';frame.style.maxHeight='none';frame.style.width='1920px';frame.style.height='1080px';frame.style.transform=`scale(${s})`;frame.style.transformOrigin='top left';frame.style.marginRight=`${width-1920}px`;frame.style.marginBottom=`${height-1080}px`;frame.style.flex='none';
     if(frame.id==='ppt-current-frame')sizeInk(document.getElementById('ppt-presenter-ink'),width,height);
   }
   function fitPresenterFrames(){
